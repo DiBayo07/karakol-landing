@@ -1,19 +1,21 @@
+import React from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AppDataProvider } from './context/AppDataContext'
 import Layout from './components/Layout'
+import AdminLayout from './pages/admin/AdminLayout'
 import HomePage from './pages/HomePage'
+import FoodPage from './pages/FoodPage'
+import SightsPage from './pages/SightsPage'
 import RoutesPage from './pages/RoutesPage'
 import RouteDetailPage from './pages/RouteDetailPage'
-import SightsPage from './pages/SightsPage'
-import FoodPage from './pages/FoodPage'
-import InfoPage from './pages/InfoPage'
-import ContactPage from './pages/ContactPage'
 import PlannerPage from './pages/PlannerPage'
-import AdminLoginPage from './pages/admin/AdminLoginPage'
-import AdminLayout from './pages/admin/AdminLayout'
+import ContactPage from './pages/ContactPage'
+import InfoPage from './pages/InfoPage'
 import AdminDashboardPage from './pages/admin/AdminDashboardPage'
+import AdminLoginPage from './pages/admin/AdminLoginPage'
 import AdminRoutesPage from './pages/admin/AdminRoutesPage'
 import AdminMessagesPage from './pages/admin/AdminMessagesPage'
+import AdminContent from './pages/admin/AdminContent'
 
 export default function App() {
   return (
@@ -36,6 +38,7 @@ export default function App() {
             <Route index element={<AdminDashboardPage />} />
             <Route path="routes" element={<AdminRoutesPage />} />
             <Route path="messages" element={<AdminMessagesPage />} />
+            <Route path="content" element={<AdminContent />} />
           </Route>
 
           <Route path="*" element={<Navigate to="/" replace />} />
