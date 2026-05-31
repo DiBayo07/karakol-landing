@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { AppDataProvider } from './context/AppDataContext'
 import Layout from './components/Layout'
 import AdminLayout from './pages/admin/AdminLayout'
